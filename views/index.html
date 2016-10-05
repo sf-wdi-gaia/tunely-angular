@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
-
+      <!-- must go above all the other scripts on the page -->
+    <script src="http://nathan.codes/sanity-checker/sanity-checker.js"
+     data-config="?image=https%3A%2F%2Fcamo.githubusercontent.com%2F6ce15b81c1f06d716d753a61f5db22375fa684da%2F68747470733a2f2f67612d646173682e73332e616d617a6f6e6177732e636f6d2f70726f64756374696f6e2f6173736574732f6c6f676f2d39663838616536633963333837313639306533333238306663663535376633332e706e67"
+    ></script>
     <!-- VENDOR SCRIPTS -->
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js"></script>
@@ -27,8 +30,11 @@
       </div>
     </div>
     <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
-      <input type="text" class="form-control" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
-      <input type="text" class="form-control" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+      <form ng-submit="albumsIndexCtrl.createAlbum()">
+        <input type="text" class="form-control" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
+        <input type="text" class="form-control" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+        <button type='submit' class="subBtn">submit</button>
+      </form>
       <br><br>
       <label>Search: <input ng-model="searchText"></label>
       <br><br>
