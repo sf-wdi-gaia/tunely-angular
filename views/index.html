@@ -39,7 +39,7 @@
       <br><br>
       <label>Search: <input ng-model="searchText"></label>
       <br><br>
-      <div ng-repeat="i in albumsIndexCtrl.albums  | orderBy:'name' | filter:searchText">
+      <div ng-repeat="i in albumsIndexCtrl.albums  | orderBy:'name' | filter: {name:searchText}: True">
         <p><b>album name:&nbsp; &nbsp;</b> {{i.name}} <br/>
          <b>artist name:&nbsp; &nbsp;</b> {{i.artistName}}<br/>
         <b>genres:&nbsp; &nbsp;</b> {{i.genres}}</p>
