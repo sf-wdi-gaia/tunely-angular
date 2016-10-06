@@ -32,7 +32,8 @@
     <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
       <form ng-submit="albumsIndexCtrl.createAlbum()">
         <input type="text" class="form-control" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
-        <input type="text" class="form-control" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+        <input type="text" class="form-control" placeholder="artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+        <input type="textarea" class="form-control" placeholder="genres" ng-model="albumsIndexCtrl.newAlbum.genres">
         <button type='submit' class="subBtn">submit</button>
       </form>
       <br><br>
@@ -40,7 +41,8 @@
       <br><br>
       <div ng-repeat="i in albumsIndexCtrl.albums  | orderBy:'name' | filter:searchText">
         <p><b>album name:&nbsp; &nbsp;</b> {{i.name}} <br/>
-         <b>artist name:&nbsp; &nbsp;</b> {{i.artistName}}</p>
+         <b>artist name:&nbsp; &nbsp;</b> {{i.artistName}}<br/>
+        <b>genres:&nbsp; &nbsp;</b> {{i.genres}}</p>
       </div>
     </div>
     <div id="foot">

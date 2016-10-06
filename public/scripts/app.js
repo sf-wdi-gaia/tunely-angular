@@ -28,7 +28,8 @@ function AlbumsIndexController ($http) {
       url: '/api/albums',
       data: {
         name: vm.newAlbum.name,
-        artistName: vm.newAlbum.artistName
+        artistName: vm.newAlbum.artistName,
+        genres: vm.newAlbum.genres
       }
     }).then(function successCallback(response) {
       // console.log(arguments);

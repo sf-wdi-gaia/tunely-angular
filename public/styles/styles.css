@@ -33,3 +33,7 @@
   margin: 2em 0 2em 0;
   color: black;
 }
+
+.form-control {
+  margin: 1em;
+}
