@@ -9,9 +9,4 @@ function index(req, res) {
   });
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 module.exports.index = index;
